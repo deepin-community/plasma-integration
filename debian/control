@@ -1,0 +1,47 @@
+Source: plasma-integration
+Section: kde
+Priority: optional
+Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
+Uploaders: Scarlett Moore <sgmoore@kde.org>,
+           Patrick Franz <deltaone@debian.org>,
+           Norbert Preining <norbert@preining.info>,
+Build-Depends: breeze-dev (>= 4:5.23~),
+               cmake (>= 3.16~),
+               debhelper-compat (= 13),
+               extra-cmake-modules (>= 5.86~),
+               gettext,
+               libkf5config-dev (>= 5.86~),
+               libkf5configwidgets-dev (>= 5.86~),
+               libkf5i18n-dev (>= 5.86~),
+               libkf5iconthemes-dev (>= 5.86~),
+               libkf5kio-dev (>= 5.86~),
+               libkf5notifications-dev (>= 5.86~),
+               libkf5wayland-dev (>= 4:5.86~),
+               libkf5widgetsaddons-dev (>= 5.86~),
+               libkf5windowsystem-dev (>= 5.86~),
+               libqt5x11extras5-dev (>= 5.15.0~),
+               libxcursor-dev,
+               pkg-config,
+               pkg-kde-tools (>= 0.15.18~),
+               qtbase5-dev (>= 5.15.0~),
+               qtbase5-private-dev,
+               qtdeclarative5-dev (>= 5.15.0~),
+               qtquickcontrols2-5-dev (>= 5.15.0~),
+Standards-Version: 4.6.0
+Homepage: https://invent.kde.org/plasma/plasma-integration
+Vcs-Browser: https://salsa.debian.org/qt-kde-team/kde/plasma-integration
+Vcs-Git: https://salsa.debian.org/qt-kde-team/kde/plasma-integration.git
+Rules-Requires-Root: no
+
+Package: plasma-integration
+Architecture: any
+Depends: breeze (>= 4:5.23),
+         qml-module-org-kde-qqc2desktopstyle,
+         ${misc:Depends},
+         ${perl:Depends},
+         ${shlibs:Depends},
+Recommends: fonts-hack, fonts-noto-hinted
+Description: Qt Platform Theme integration plugins for KDE Plasma
+ A plugin to provide Qt Platform Theme integration for the Plasma
+ workspace.
+Breaks: plasma-desktop (<< 4:5.14), plasma-workspace (<< 4:5.14)
